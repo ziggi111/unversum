@@ -29,7 +29,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 0.9;
-		background-color: #000;
+		background-color: red;
 		border: solid 1px #eeeeee;
 		color: #ffffff;
 		border-radius: 5px;
@@ -74,7 +74,7 @@
 }
 
 .cube {
-	animation: rotate .8s infinite linear;
+	animation: rotate .6s infinite linear;
 }
 
 .wrap2 > .cube {
@@ -115,44 +115,44 @@
 	display: block;
 	background-color: white;
 	border-radius: 50%;
-	width: 5px;
-	height: 5px;
+	width: 8px;
+	height: 8px;
 }
 
 	.point.center {
-		left: 16px;
-		top: 16px;
+		left: 15px;
+		top: 15px;
 	}
 
 	.point.top-left {
-		left: 6px;
-		top: 6px;
+		left: 5px;
+		top: 5px;
 	}
 
 	.point.top-right {
-		left: 26px;
-		top: 6px;
+		left: 25px;
+		top: 5px;
 	}
 
 	.point.bottom-left {
-		left: 6px;
-		top: 26px;
+		left: 5px;
+		top: 25px;
 	}
 
 	.point.bottom-right {
-		left: 26px;
-		top: 26px;
+		left: 25px;
+		top: 25px;
 	}
 
 
 	.point.center-left {
-		left: 6px;
-		top: 16px;
+		left: 5px;
+		top: 15px;
 	}
 
 	.point.center-right {
-		left: 26px;
-		top: 16px;
+		left: 25px;
+		top: 15px;
 	}
 
 
@@ -172,7 +172,7 @@
 		height: 40px;
 		width: 40px;
 		opacity: 0.9;
-		background-color: #000;
+		background-color: red;
 		border: solid 1px #eeeeee;
 		color: #ffffff;
 		border-radius: 5px;

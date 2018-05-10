@@ -109,7 +109,7 @@ function controller($scope)
 
 			for (let _i = 0; _i < 51; ++_i)
 			{
-				const id = direction > 0 ? (50 - _i) : 50 + _i + 1;
+				const id = direction > 0 ? (50 - _i) : 50 + _i + 2;
 				const type = ((id - 1) % 7 + 1);
 				const iconClass = 'field-image ' + ' p' + type;
 				$scope.fields.push({
@@ -153,17 +153,25 @@ function controller($scope)
 			}
 
 		}
+		$scope.fields.push({
+			id: 51,
+			type: -1,
+			x: -11,
+			y: 11,
+			containerClass: 'logo',
+			color: {}
+		});
 		$scope.fields.sort((aa, bb) => aa.id - bb.id);
 
 		const length = $scope.fields.length;
 		for (let _index = 1; _index <= length; _index++)
 		{
 			const current = $scope.fields[_index - 1];
-			const isRep = (current.id == 50 || current.id == 101);
+			const isRep = (current.id == 50 || current.id == 102);
 			const next = $scope.fields[isRep ? _index - 2 : _index % length];
 			const ang = angle(next.x - current.x, next.y - current.y);
 			current.angle = (90 - ang) + (isRep ? 180 : 0);
-			if (isRep || current.id == 0 || current.id == 100)
+			if (isRep || current.id == 0 || current.id == 101)
 				current.containerClass += ' first';
 
 			current.style = {
@@ -172,10 +180,16 @@ function controller($scope)
 				transform: 'rotate(' + current.angle + 'deg)',
 				background: 'radial-gradient(white, rgb(' + current.color.r + ',' + current.color.g + ',' + current.color.b + '))'
 			}
-			if (current.id == 0 || current.id == 101)
+			if (current.id == 0 || current.id == 102 )
 			{
+				current.hideIcon = true;
 				current.containerClass = 'rocket';
 				current.style.background = undefined;
+			}
+			if (current.id == 51)
+			{
+				current.hideIcon = true;
+				current.style.transform= undefined;
 			}
 
 		}

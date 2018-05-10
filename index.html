@@ -11,9 +11,8 @@
 		<div style="position: absolute; top: 40px; left: 40px;transform: scale(.90)">
 			<div id="field" style="position: absolute; width: calc(830px + 58px); height: calc(808px + 58px); top: 0; left: 0;">
 				<div ng-repeat="item in fields" class="{{item.containerClass}}" ng-class="{active:currentField.id == item.id}" ng-style="item.style">
-					<span ng-class="item.iconClass" ng-if="item.id != 0 && item.id != 101"></span>
+					<span ng-class="item.iconClass" ng-if="!item.hideIcon "></span>
 				</div>
-				<span class="logo"></span>
 			</div>
 
 			<div ng-repeat="item in pack" class="card {{item.class}}" ng-class="{active:currentField.type == item.id}">
