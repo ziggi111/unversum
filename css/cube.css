@@ -1,0 +1,179 @@
+.wrap1 {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	perspective: 1000px;
+	perspective-origin: 50% 50%;
+}
+
+.wrap2 {
+	position: absolute;
+	top: 40px;
+	left: 80px;
+	perspective: 1000px;
+	perspective-origin: 50% 50%;
+}
+
+.cube {
+	margin: auto;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	transform-style: preserve-3d;
+}
+
+	.cube > div {
+		position: absolute;
+		box-sizing: border-box;
+		padding: 10px;
+		height: 100%;
+		width: 100%;
+		opacity: 0.9;
+		background-color: #000;
+		border: solid 1px #eeeeee;
+		color: #ffffff;
+		border-radius: 5px;
+	}
+
+.front {
+	transform: translateZ(20px);
+}
+
+.back {
+	transform: translateZ(-20px) rotateY(180deg);
+}
+
+.right {
+	transform: rotateY(-270deg) translateX(20px);
+	transform-origin: top right;
+}
+
+.left {
+	transform: rotateY(270deg) translateX(-20px);
+	transform-origin: center left;
+}
+
+.top {
+	transform: rotateX(-270deg) translateY(-20px);
+	transform-origin: top center;
+}
+
+.bottom {
+	transform: rotateX(270deg) translateY(20px);
+	transform-origin: bottom center;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+
+	to {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+
+.cube {
+	animation: rotate .8s infinite linear;
+}
+
+.wrap2 > .cube {
+	animation: rotate .7s infinite linear;
+}
+
+
+/*.wrap:hover .front {
+	transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+	transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+	transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+	transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+	transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+	transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube > div {
+	transition: transform 0.2s ease-in;
+}*/
+
+.point {
+	position: absolute;
+	display: block;
+	background-color: white;
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+}
+
+	.point.center {
+		left: 16px;
+		top: 16px;
+	}
+
+	.point.top-left {
+		left: 6px;
+		top: 6px;
+	}
+
+	.point.top-right {
+		left: 26px;
+		top: 6px;
+	}
+
+	.point.bottom-left {
+		left: 6px;
+		top: 26px;
+	}
+
+	.point.bottom-right {
+		left: 26px;
+		top: 26px;
+	}
+
+
+	.point.center-left {
+		left: 6px;
+		top: 16px;
+	}
+
+	.point.center-right {
+		left: 26px;
+		top: 16px;
+	}
+
+
+.cube-static {
+	position: relative;
+	height: 40px;
+	width: 100px;
+	top: 40px;
+	left: 40px;
+	cursor: pointer;
+}
+
+	.cube-static > div {
+		position: absolute;
+		box-sizing: border-box;
+		padding: 10px;
+		height: 40px;
+		width: 40px;
+		opacity: 0.9;
+		background-color: #000;
+		border: solid 1px #eeeeee;
+		color: #ffffff;
+		border-radius: 5px;
+	}

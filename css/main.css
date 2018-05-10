@@ -1,0 +1,160 @@
+.circle {
+	width: 58px;
+	height: 58px;
+	border: 1px solid black;
+	position: absolute;
+	border-radius: 50%;
+}
+
+	.circle:before {
+		content: '';
+		display: block;
+		border: 8px solid transparent;
+		border-bottom-color: white;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: -28px;
+		left: 22px;
+	}
+
+	.circle.first:before {
+		display: none;
+	}
+
+	.circle.active {
+		border: 4px solid black;
+	}
+
+.rocket {
+	position: absolute;
+	background-image: url(../images/rocket.svg);
+	width: 62px;
+	height: 62px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: 10px;
+	border: none;
+}
+
+.field-image {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+}
+
+	.card-image.credo,
+	.field-image.p1 {
+		background-image: url(../images/credo.svg);
+	}
+
+	.card-image.question,
+	.field-image.p2 {
+		background-image: url(../images/question.svg);
+	}
+
+	.card-image.emotion,
+	.field-image.p3 {
+		background-image: url(../images/emotion.svg);
+	}
+
+	.card-image.idea,
+	.field-image.p4 {
+		background-image: url(../images/idea.svg);
+		left: 7px;
+	}
+
+	.card-image.quality,
+	.field-image.p5 {
+		background-image: url(../images/quality.svg);
+	}
+
+	.card-image.resource,
+	.field-image.p6 {
+		background-image: url(../images/resource.svg);
+	}
+
+	.card-image.action,
+	.field-image.p7 {
+		background-image: url(../images/action.svg);
+	}
+
+.logo {
+	position: absolute;
+	top: 393px;
+	left: 404px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-image: url(../images/logo.svg);
+	background-size: cover;
+	/*border: 1px solid black;*/
+}
+
+.card {
+	position: absolute;
+	left: calc(888px + 40px);
+	width: 250px;
+	height: 110px;
+	border-radius: 10px
+}
+
+
+	.card.resource {
+		top: 0;
+		background: radial-gradient(ellipse,white, rgb(255, 0, 0));
+	}
+
+	.card.emotion {
+		top: 130px;
+		background: radial-gradient(ellipse,white, rgb(255, 120, 0));
+	}
+
+	.card.action {
+		top: 260px;
+		background: radial-gradient(ellipse,white, rgb(255, 255, 0));
+	}
+
+	.card.credo {
+		top: 390px;
+		background: radial-gradient(ellipse, white, rgb(0, 200, 0));
+	}
+
+
+	.card.quality {
+		top: 520px;
+		background: radial-gradient(ellipse,white, rgb(0, 0, 255));
+	}
+
+	.card.question {
+		top: 650px;
+		background: radial-gradient(ellipse,white, rgb(70, 0, 200));
+	}
+
+	.card.idea {
+		top: 780px;
+		background: radial-gradient(ellipse,white, rgb(140, 0, 255));
+	}
+
+.card-image {
+	width: 60px;
+	height: 60px;
+	display: block;
+	background-size: cover;
+	margin: 25px auto;
+}
+
+.card.active {
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-text {
+	margin: 0 10px;
+	text-align: center;
+}
